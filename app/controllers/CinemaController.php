@@ -116,6 +116,8 @@ class CinemaController extends \BaseController {
 			}
 		}
 		$date = date('Y-m-d', strtotime($date));
+                
+                echo $date;
 
 		$item = Cinema::with(array('movies' => function($q) use ($date){
 									$q->where('dateTime',  $date);					
@@ -154,7 +156,7 @@ class CinemaController extends \BaseController {
 	
 
 	/**
-	 * return all cinemas with their locations as a JSON format 
+	 * return all cinemas with the distance between the cinema and a gps point 
 	 * base on a given gps location. Only users with "pacific" role
 	 * are able to use this function.
 	 *

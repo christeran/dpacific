@@ -6,7 +6,7 @@ This API is written in PHP using the framework Laravel 4 and MSSQL as a database
 
 Installation
 ------------
-1. Donwload the project.
+1. Download the project.
 2. Install "composer" if necessary.
 3. Update the database config file.
 4. Create a database.
@@ -22,7 +22,7 @@ API Functionalities
 
 #### 1. Authentication
 The API use laravel basic-auth as authentication for all responds.
-The user must be authenticated in orden to use the API.
+The user must be authenticated in order to use the API.
 
 The default users are:
 * User 1 (the role of this user is "user"):
@@ -68,6 +68,15 @@ examples:
 ```shell
   ../christian/unsw/today
   ../christian/unsw/08-09-2014
+```
+
+Issues:
+This function is not working correctly as the database is expecting a datetime format input.
+One way to resolve it is by casting the query as below
+```shell
+select * from
+`sessionTimes` 
+ where date(dateTime) = '2014-09-07'
 ```
 
 ### Cinema Location
