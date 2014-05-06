@@ -70,9 +70,9 @@ examples:
   ../christian/unsw/08-09-2014
 ```
 
-Issues:
+_Issues:
 This function is not working correctly as the database is expecting a datetime format input.
-One way to resolve it is by casting the query as below
+One way to resolve it is by casting the query as below_
 ```shell
 select * from
 `sessionTimes` 
