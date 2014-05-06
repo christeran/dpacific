@@ -32,8 +32,8 @@ The default users are:
 ```
 * User 2 (the role of this user is "pacific"):
 ```shell
-user:pacific
-password:pacific
+user:dpacific
+password:dpacific
 ```
 #### 2. Authorization
 Only users with "pacific" role are allow to use the location functionality.
